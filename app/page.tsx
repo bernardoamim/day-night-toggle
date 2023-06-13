@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+// import { useTheme } from 'next-themes'
 
 import CloudSVG from '../public/assets/svg/cloud.svg'
 import StarsSVG from '../public/assets/svg/stars.svg'
@@ -46,8 +47,10 @@ const starsAnimatedClasses = {
   dark: `opacity-100 scale-100 duration-700`,
 }
 
+// const defaultTheme: 'light' | 'dark' = 'light'
+
 export default function Home() {
-  const [theme, toggleTheme] = useTheme('light')
+  const [theme, toggleTheme] = useTheme()
 
   return (
     <main className="flex min-h-screen max-w-screen flex-col items-center justify-center p-24">
@@ -55,7 +58,7 @@ export default function Home() {
         Day & Night Toggle 🎉
       </h1>
       <h2 className="text-2xl mb-20">
-        Yes, it&apos;s the same one that made us all laugh on TikTok... 😅
+        A really joyful day & night toggle for your next app... 😅
       </h2>
 
       <div className="flex flex-col justify-center h-48 w-48 p-6 border border-dashed border-[#9747FF] rounded-md">
